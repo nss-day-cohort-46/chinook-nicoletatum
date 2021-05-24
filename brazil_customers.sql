@@ -1,2 +1,3 @@
-SELECT CustomerId, FirstName, LastName, Country 
-FROM Customer WHERE Country IN ("Brazil");
+SELECT FirstName, LastName, InvoiceId, InvoiceDate, BillingCountry FROM Invoice
+JOIN Customer ON Invoice.CustomerId = Customer.CustomerId
+WHERE Country = 'Brazil';
